@@ -38,17 +38,42 @@ func main() {
 
 	//常量
 	//const PI=3.1415926
-	const (
-		UNKNOWN = 0
-		Female  = 1
-		Male    = 2
-	)
-	const (
-		x int = 1
-		y
-		s = "abc"
-		z
-	)
-	fmt.Println(x, y, s, z) // Output: 1 1 abc abc
+	//const (
+	//	UNKNOWN = 0
+	//	Female  = 1
+	//	Male    = 2
+	//)
+	//const (
+	//	x int = 1
+	//	y
+	//	s = "abc"
+	//	z
+	//)
+	//fmt.Println(x, y, s, z) // Output: 1 1 abc abc
 
+	//const常量的iota，常量计数器
+	const (
+		a = iota
+		b
+		c
+	)
+	fmt.Println(a, b, c) //Output: 0 1 2
+
+	//1. iota只能在常量组中使用
+	//2. 不同的const定义块互不干扰
+	const (
+		d = iota
+		e
+		f
+	)
+	fmt.Println(d, e, f)
+	//3. 没有表达式的常量定义，复用上一行的表达式
+	//4. 从第一行开始，iota从0逐行加一
+	const (
+		g = iota // iota=0
+		h = 10   //iota=1
+		i        // i=10,iota=2
+		j = iota
+	)
+	fmt.Println(g, h, i, j) //Output: 0 10 10 3
 }
