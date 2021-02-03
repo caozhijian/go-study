@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//变量的定义
 	//1.最基础的变量定义
@@ -33,4 +35,20 @@ func main() {
 	//	a int
 	//	name string
 	//)
+
+	//常量
+	//const PI=3.1415926
+	const (
+		UNKNOWN = 0
+		Female  = 1
+		Male    = 2
+	)
+	const (
+		x int = 1
+		y
+		s = "abc"
+		z
+	)
+	fmt.Println(x, y, s, z) // Output: 1 1 abc abc
+
 }
