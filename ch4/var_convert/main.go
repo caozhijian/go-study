@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	//基本的类型转换
@@ -18,4 +21,16 @@ func main() {
 
 	var d int = int(c)
 	fmt.Println(d)
+
+	//int转字符串，Itoa
+	var t int = 3
+	fmt.Printf("%T\n", t)
+	s := strconv.Itoa(t)
+	fmt.Printf("%T\n", s)
+
+	//string转int，Atoi
+	var s2 string = "3"
+	fmt.Printf("%T\n", s2)
+	i, _ := strconv.Atoi(s2)
+	fmt.Printf("%T\n", i)
 }
