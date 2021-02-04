@@ -35,9 +35,15 @@ func main() {
 	//fmt.Printf("%T\n", i)
 
 	//parse类的函数
-	b, _ := strconv.ParseBool("true")
-	fmt.Println(b)
+	//b, _ := strconv.ParseBool("true")
+	//fmt.Println(b)
 
-	f, _ := strconv.ParseFloat("3.1415", 64)
-	fmt.Printf("%T", f)
+	//f, _ := strconv.ParseFloat("3.1415", 64)
+	//fmt.Printf("%T", f)
+
+	//format类函数，将指定类型格式化为string类型
+	//s:=strconv.FormatBool(true)
+	s := strconv.FormatFloat(3.1415, 'E', -1, 64)
+	fmt.Println(s)
+	fmt.Printf("%T", s)
 }
