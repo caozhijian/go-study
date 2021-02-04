@@ -22,4 +22,9 @@ func main() {
 
 	weightFree := 80.5
 	fmt.Printf("%T", weightFree) //Output: float64
+
+	//byte与rune
+	//byte是unit8的别称，rune是int32的别称
+	var a byte = 18
+	fmt.Println(a)
 }
