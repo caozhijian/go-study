@@ -113,6 +113,13 @@ func main() {
 	//sliceTest5的len是5,cap是8
 	fmt.Printf("sliceTest5的len是%d,cap是%d\n", len(sliceTest5), cap(sliceTest5))
 
+	fmt.Println("=================================")
+	//当make遇到append容易出现的坑
+	s1 := make([]int, 5, 6)
+	s1 = append(s1, 6)
+	fmt.Println(s1) //Output: [0 0 0 0 0 6]
+	fmt.Println(len(s1), cap(s1))
+
 }
 
 func replace(mySlice []string) {
