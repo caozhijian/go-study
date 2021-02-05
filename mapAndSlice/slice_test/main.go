@@ -15,6 +15,13 @@ func main() {
 	course3 := [5]string{"数学", "物理", "化学", "生物", "小提琴"}
 	subCourse3 := course3[1:4]
 	fmt.Println(subCourse3)
-	fmt.Printf("sunCourse3的类型是%T", subCourse3)
+	fmt.Printf("sunCourse3的类型是%T\n", subCourse3)
 
+	//数组是值传递，但切片是引用传递
+	replace(subCourse3)
+	fmt.Println(subCourse3) //Output: [逗你玩 化学 生物]
+}
+
+func replace(mySlice []string) {
+	mySlice[0] = "逗你玩"
 }
