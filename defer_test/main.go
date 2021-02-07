@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	//fmt.Println("test1")
 	//defer之后只能是函数调用，不能是表达式，比如a++
-	//多个defer同时出现，会按照先进后出的顺序执行
+	//多个defer同时出现，会按照后进先出（LIFO）的顺序执行
 	//defer fmt.Println("defer test1")
 	//defer fmt.Println("defer test2")
 	//defer fmt.Println("defer test3")
