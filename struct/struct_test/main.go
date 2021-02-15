@@ -49,10 +49,17 @@ func main() {
 	fmt.Println(unsafe.Sizeof("golang")) //16
 	fmt.Println(unsafe.Sizeof(c8))       //16+8+16=40
 
+	fmt.Println("----------------------------------")
+	c10 := Course{"清史", 160, "https://www.google.com"}
+	c10.printCourseInfo()
 }
 
 type Course struct {
 	Name  string
 	Price int
 	Url   string
+}
+
+func (c Course) printCourseInfo() {
+	fmt.Printf("课程名:%s,课程价格:%d,课程地址:%s\n", c.Name, c.Price, c.Url)
 }
