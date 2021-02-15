@@ -52,6 +52,8 @@ func main() {
 	fmt.Println("----------------------------------")
 	c10 := Course{"清史", 160, "https://www.google.com"}
 	c10.printCourseInfo()
+	c10.setCoursePrice(200)
+	c10.printCourseInfo()
 }
 
 type Course struct {
@@ -62,4 +64,7 @@ type Course struct {
 
 func (c Course) printCourseInfo() {
 	fmt.Printf("课程名:%s,课程价格:%d,课程地址:%s\n", c.Name, c.Price, c.Url)
+}
+func (c *Course) setCoursePrice(price int) {
+	c.Price = price
 }
